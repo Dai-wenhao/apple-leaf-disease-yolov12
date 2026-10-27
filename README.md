@@ -28,6 +28,15 @@ train_dc.py / train_dc_gsconv.py / train_dc_gsconv_mambaout.py   # 训练脚本
 val_test_all.py / val_test_full.py / val_test_gsconv.py          # 测试集评估脚本
 ```
 
+## 数据集
+
+本仓库不含数据,以下两个开源数据集需自行下载:
+
+| 数据集 | 类别 | 用途 | 放置目录 |
+|--------|------|------|----------|
+| Plant Pathology Apple Dataset | 4 类(Healthy / Scab / Black_rot / Cedar_rust) | 主实验(整叶级) | `dataset/dataset_new_apple_split/` |
+| ATLDSD | 5 类(Alternaria leaf spot / Brown spot / Gray spot / Healthy leaf / Rust) | 迁移/对比实验 | `dataset/ATLDSD/` |
+
 ## 使用说明
 
 本仓库只包含**相对官方 Ultralytics 的改动文件**,不含完整 ultralytics 源码、数据集与权重。运行需:
@@ -35,7 +44,7 @@ val_test_all.py / val_test_full.py / val_test_gsconv.py          # 测试集评�
 1. 安装 Ultralytics 8.3.63(PyTorch 2.6 / CUDA 12.4)
 2. 将 `ultralytics/nn/` 下 5 个改动文件覆盖到安装目录对应位置
 3. 下载 COCO 预训练权重 `yolov12n.pt` 放到项目根目录
-4. 数据集:开源苹果叶片病害数据集(整叶级 4 类),自行下载并组织为 `dataset/dataset_new_apple_split/{images/train, images/val, images/test}`,并修改 `data.yaml` 中的 `path`
+4. 数据集:按上表下载并组织为 `images/{train, val, test}` 结构,并修改各 `data.yaml` 中的 `path`
 
 ## 训练
 
