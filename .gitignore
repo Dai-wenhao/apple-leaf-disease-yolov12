@@ -1,0 +1,24 @@
+# 数据集(开源,不传)
+dataset/
+
+# 实验记录/结果
+runs/
+logs/
+
+# 权重
+*.pt
+
+# 中间产物
+*.csv
+*.png
+*.jpg
+_tmp_*
+
+# 环境/IDE
+.venv/
+.idea/
+__pycache__/
+*.egg-info/
+
+# 本地工具配置
+.claude/
